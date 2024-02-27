@@ -1,0 +1,15 @@
+<div class="container">
+<h1>Task List</h1>
+
+<ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <label><%= link_to task.name, task_path(task) %></label>
+        </li>
+    <% end %>
+  </ul>
+
+<div class="add-task-btn">
+    <%= link_to "Add a Task", tasks_new_path %>
+  </div>
+</div>
